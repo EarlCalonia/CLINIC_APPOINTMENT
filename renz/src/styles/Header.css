@@ -1,0 +1,142 @@
+/* --- NAVBAR CONTAINER --- */
+.navbar {
+  height: 70px;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%); /* Primary Blue Gradient */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  flex-shrink: 0;
+  z-index: 50;
+}
+
+/* --- LOGO --- */
+.logo-container {
+  min-width: 200px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- NAVIGATION LINKS --- */
+.nav-links {
+  display: flex;
+  gap: 8px;
+  margin-left: auto; /* Pushes links towards the right */
+  margin-right: 2rem; /* Spacing before profile */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.nav-item.active {
+  background: white;
+  color: var(--primary-color); /* #3b82f6 */
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- PROFILE SECTION (New Design) --- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* Glassmorphism Pill Effect */
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 12px 6px 8px;
+  border-radius: 50px; /* Pill Shape */
+  transition: background 0.2s;
+}
+
+.nav-right:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar { 
+  width: 36px; 
+  height: 36px; 
+  background: white; 
+  color: var(--primary-color); 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-weight: 800; 
+  font-size: 0.9rem; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.user-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+}
+
+.user-role {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Divider Line */
+.divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* --- LOGOUT BUTTON --- */
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fee2e2; /* Slight red tint on hover */
+  transform: scale(1.1);
+}
