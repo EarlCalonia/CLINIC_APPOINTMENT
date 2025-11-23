@@ -138,7 +138,7 @@ export default function Appointments() {
             </div>
           )}
           
-          {/* THE TABLE (ADJUSTED FOR ALIGNMENT) */}
+          {/* THE TABLE */}
           <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
             <div className="table-container" style={{ border: 'none', borderRadius: 0 }}>
               <table>
@@ -150,15 +150,12 @@ export default function Appointments() {
                     
                     <th style={{minWidth: '90px'}}>Time</th>
                     <th style={{minWidth: '140px'}}>Patient</th>
-                    
-                    {/* Expanded 'Visit Info' to 35% to push Actions column to the far right edge */}
                     <th style={{minWidth: '160px', width: '35%'}}>Visit Info</th>
-                    
                     <th style={{minWidth: '110px'}}>Doctor</th>
                     <th style={{minWidth: '100px'}}>Status</th>
                     
-                    {/* Removed Right Padding so icons align flush with the header button above */}
-                    <th style={{textAlign:'right', minWidth: '90px', paddingRight: '1.25rem'}}>ACTIONS</th>
+                    {/* FIXED: Removed minWidth, added explicit matching padding to override conflicts */}
+                    <th style={{textAlign:'right', paddingRight: '1.5rem'}}>ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -201,9 +198,9 @@ export default function Appointments() {
                         </span>
                       </td>
 
-                      {/* Reduced Padding Right on Data Cells too */}
-                      <td style={{textAlign: 'right', paddingRight: '1.25rem'}}>
-                        <div style={{display: 'flex', gap: '4px', justifyContent: 'flex-end'}}>
+                      {/* FIXED: Added explicit paddingRight to match header, ensuring alignment */}
+                      <td style={{textAlign: 'right', paddingRight: '1.5rem'}}>
+                        <div style={{display: 'flex', gap: '8px', justifyContent: 'flex-end'}}>
                           <button className="icon-btn view" title="View Details" onClick={() => handleView(apt)}>
                             <Eye size={18}/>
                           </button>
