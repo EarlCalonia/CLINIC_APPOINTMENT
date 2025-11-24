@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { LogIn, Lock, Mail } from 'lucide-react';
 import '../styles/Login.css';
 
+// 1. Import the logo
+import clinicLogo from '../assets/CLINICCARE.png'; 
+
 export default function Login() {
   const navigate = useNavigate();
   
@@ -13,11 +16,8 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // --- MOCK LOGIN LOGIC ---
-    // In a real app, you would send an API request here.
-    // For now, we just redirect to the Dashboard.
     console.log("Logging in with:", formData);
-    navigate('/'); // Brings you to the Admin Dashboard
+    navigate('/'); 
   };
 
   return (
@@ -25,6 +25,14 @@ export default function Login() {
       
       {/* Left Side: Branding */}
       <div className="login-brand-section">
+        
+        {/* 2. Insert Logo Here */}
+        <img 
+          src={clinicLogo} 
+          alt="ClinicCare Logo" 
+          style={{ width: '300px', marginBottom: '0.1rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))' }} 
+        />
+
         <div className="brand-logo">CALONIA</div>
         <p className="brand-subtitle">
           Centralized Appointment & Logistics Operations Network Interface Application
@@ -34,7 +42,7 @@ export default function Login() {
         </div>
       </div>
 
-      {/* Right Side: Form */}
+      {/* Right Side: Form (Unchanged) */}
       <div className="login-form-section">
         <div className="login-card animate-slide-up">
           <div className="login-header">

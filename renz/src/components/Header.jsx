@@ -3,9 +3,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Calendar, Users, LogOut } from 'lucide-react';
 import '../styles/Header.css';
 
+// 1. Import the header logo
+import headerLogo from '../assets/ALONIA.png';
+
 const NavItem = ({ icon, label, to }) => {
   const location = useLocation();
-  // Checks if the current path matches the link (for highlighting)
   const isActive = location.pathname === to || (to !== '/' && location.pathname.startsWith(to));
   
   return (
@@ -20,15 +22,18 @@ export default function Header() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // In a real app, you would clear tokens here (e.g., localStorage.clear())
     navigate('/login');
   };
 
   return (
     <nav className="navbar">
-      {/* Left: Logo */}
+      {/* Left: Logo Replacement */}
       <div className="logo-container">
-        <div className="logo">CALONIA</div>
+        <img 
+          src={headerLogo} 
+          alt="Alonia Logo" 
+          style={{ height: '40px', objectFit: 'contain' }} 
+        />
       </div>
       
       {/* Middle: Navigation Links */}
